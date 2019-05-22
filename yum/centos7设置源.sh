@@ -48,3 +48,9 @@ enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7' > /etc/yum.repos.d/CentOS-Base.repo
 
 yum update -y
+
+yum install wget -y
+wget https://mirrors.aliyun.com/epel/7Server/x86_64/Packages/e/epel-release-7-11.noarch.rpm
+rpm -ivh https://mirrors.aliyun.com/epel/7Server/x86_64/Packages/e/epel-release-7-11.noarch.rpm
+yum clean all
+yum -y update
